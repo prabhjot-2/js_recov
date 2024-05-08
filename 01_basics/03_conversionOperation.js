@@ -30,3 +30,23 @@ let stringconvert= String(someNumber)
 console.log(stringconvert)
 console.log( typeof stringconvert)
 
+
+//***************Operations************ 
+ 
+let value=8;
+let negValue=-value
+console.log(negValue);
+
+
+// console.log(2+2);
+// console.log(2-2);
+// console.log(2*2);
+// console.log(2**5);
+// console.log(2/2);
+// console.log(2%2);
+
+console.log("1"+2)
+console.log(1+"2")
+console.log("1"+2+2)
+console.log(1+2+"2")
+
