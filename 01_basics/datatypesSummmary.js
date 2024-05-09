@@ -8,3 +8,9 @@
 
 //Reference(Non Primitive)
 // Array Objects Functions
+
+
+
+// +++++++++++++++ about memory
+
+//Stack(Primitive): call by value , Heap(NOn - Primitive) : call by refernece
