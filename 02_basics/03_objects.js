@@ -6,6 +6,7 @@ Object.create
 
 // in interview they asked using symbol as a key print the value
 
+//Object literals:-
 const mySym=Symbol("key1");
 
 const JsUser={
