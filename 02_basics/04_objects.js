@@ -61,3 +61,20 @@ console.log(Object.values(user))// output: [ '123abs', 'Sam', false ]
 console.log(Object.entries(user))// output: [ [ 'id', '123abs' ], [ 'name', 'Sam' ], [ 'isLoggedIn', false ] ] 
 
 console.log(user.hasOwnProperty('id'));// e dsda hai ki ode kol e key haigi hai k nhi 
+
+const course={
+    coursename:"freeeee",
+    price:"01",
+    courseInstructor:"Prabhjot"
+}
+//two ways to destructor
+// const{courseInstructor}= course;
+// console.log(courseInstructor);
+const{courseInstructor:instructor}= course;
+console.log(instructor);
+
+// {
+//     "name": "Prabhjot",
+//     "age":"18"
+// } JSON
+
