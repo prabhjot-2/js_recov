@@ -4,11 +4,32 @@
     <meta charset="UTF-8">
     
     <title>DOM Learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
+<body class="bg-black">
+    <div >
         <h1 class="heading"> Dom Learning</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam accusamus unde et accusantium vitae pariatur alias reprehenderit placeat ipsam quidem adipisci ratione itaque voluptatum, repellendus mollitia blanditiis earum, quibusdam quas?</p>
     </div>
 </body>
 </html>
+
+// e sab browser console ch use hovega
+<!-- Query Selectors -->
+//.getElementById used to get used in browser console 
+// .innerText dsda k jo sanu screen te show hunda 
+// .textContent e dsda ki jhera ode ander haiga mtlb kayi var koi style de nal hidden hunda te e sab kuj show kra dinda
+<!-- .querySelector() e use hunda jado koi dekhna hove te brackets de ander css selector de nal likho us hisab nal likh k use kar skde -->
+
+<!-- NodeList : array di tra nhi hunda thodi properties same hundia 
+e odo nodelist odo milda jado QuerySelectorAll run karde   
+te querySelectorall return karda nodelist fer j kuj chnage karna hove 
+ta {name[0].style.color="green"} eda likh k use kar skde  -->
+<!-- HTMLCollection E v array varga nhi hunda te ehde ch forEach v nhi haiga te is layi enu array ch convert karna paina
+te Array ch convert karn layi  -->
+<!-- Array.from(HTMLCollectionNAme ) -->// is nal o convert ho janda array ch
