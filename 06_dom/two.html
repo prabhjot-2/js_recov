@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM </title>
+</head>
+<body style="background-color: #212121;  color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tueday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+
+    </div>
+</body>
+
+<script>
+    //e sare console browser c print karn ge
+    const parent=document.querySelector('.parent')// is traike nal parent class nu seleect kita te parent var ch store kar lita te oo dssdega ki ede ander ki ki haiga 
+    console.log(parent);//ene class parent print kar deni sari  div parent 
+    console.log(parent.children);// HTMLCollection(4) te e almost array di tra hunda hai
+    console.log(parent.children[1].innerHTML);// Tueday ene ode ander jo likya oo print kar dena 
+
+    for (let i= 0; i < parent.children.length; i++) {
+        console.log(parent.children[i].innerHTML); // te ene sare oo print karde days name
+    }
+    parent.children[1].style.color="orange"// ene color change kar dena oda
+
+    console.log(parent.children.firstElementChild);// e first child nu point out kar dega ode div nu 
+    console.log(parent.children.lastElementChild);// te e last vale div nu nu point out kar dega
+
+
+    const dayOne=document.querySelector('.day')
+    console.log(dayOne);// e monaday vale div nu point kar duga
+    console.log(dayOne.parentElement);// e ode parent elemnet div nu point out kardega te print kar dega
+    console.log(dayOne.nextElementSibling);// e ode next sibling  de div nnu 
+
+    console.log("NODES:" , parent.childNodes)//
+// NodeList(9) [text, div.day, text, div.day, text, div.day, text, div.day, text] ene nodelist deti 
+
+</script>
+</html>
