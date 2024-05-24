@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM </title>
+</head>
+<body style="background-color: #212121;  color: #fff;">
+    <ul>
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const li=document.createElement('li')
+        li.innerHTML='${langName}'
+        document.querySelector('.language').appendChild(li)
+
+    }
+
+    addLanguage("python")
+    addLanguage("typeScript")
+
+    function addOptiLanguage(langName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addOptiLanguage('golang')
+    // both function doing same work but 2 function is more optimize as compare to 1 beacuse in 1 function the ineerhtml traverse all the nodes and later add text iver there but in 2 function jheraa oo textNode haiga oo othe create kar dinda te baad ch append child nal onu add kar do
+
+    //  EDIT
+
+    const secondLang=document.querySelector("li:nth-child(2)")
+    // secondLang.innerHTML="Mojo"
+    const newLi=document.createElement('li')
+    newLi.textContent="Mojo"
+    secondLang.replaceWith(newLi)// e is liye use kita kyu ki oda refernce si te oda hi replace karta
+
+    // EDIT
+    const firstLang=document.querySelector("li:first-child")
+    firstLang.outerHTML='<li> TypeScript </li>' //ehda v kar skde j e likhde te pura html dena painda
+
+    // REMOVE
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()
+
+</script>
+</html>
