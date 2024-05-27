@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+
+<script>
+    // document.getElementById('owl').onclick=function(){
+    //     alert("owl Clicked");
+    // }
+
+    //type,timeStamp, defaultPrevented
+    // target , toElement. srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey , ctrlkey, shiftkey, keuCode
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     alert("owl clicked again")
+    // }, false)// e latest tarika hiaga  te j false nhi v likhde tavi work karda default false hunda 
+        // agar apa e print karnde mtlb jhere events haige te oo bhut sare haige jhere uute likhe oo imp haige te oo read kardo
+    
+    
+    // EventPropogation
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul")
+    }, false)
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("owl clicked")
+        // e.stopPropagation() (bubbling stop krdo ) e jhera hunda e krda ki jhera oo bubbling karda oo j inside to outside javgea te oo othe onu inside te rok davega 
+
+    }, false)
+    // bubbling : j apa false rakhde te oo inside to outside janda mtlb phela owl clicked print hunda te baad ch ul click print hunda
+    // capturing : j apa true rakhde haige te oo outside to indside janda mmtlb ul print hovega te baad ch owl vala 
+
+    document.getElementById('google').addEventListener
+    ('clcik', function(e){
+        e.preventDefault();// e default hon to rokda mtlb agar e la te ki haiga c link te clcik karn te google open hona c par agar j e likh ta te o open nhi hovega 
+
+        e.stopPropagation();// e ta likhya kyu ki o ul de under hi anda te o line v print hundi c te onu na print karn layi e kita means (bubbling roki)
+        console.log("google Clicked");
+    }, false)
+
+    document.querySelector('#images').addEventListener
+    ('click', function(e){
+        concole.log(e.target.tagName)
+        if(e.target.tagName==='IMG'){
+            console.log(e.target.id)
+            let remoIt=e.target.parentNode// e.target jithe click kita onu target khende .tagName onu ki chiz haigi o te parentNode jive img da parent list te list da parent UL
+            remoIt.remove();
+            // remoIt.parentNode.removechild(remoIt)
+        }
+
+    })
+
+</script>
+</html>
