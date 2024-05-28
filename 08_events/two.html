@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Async code</h1>
+    <button id="stop"> Stop</button>
+</body>
+ 
+<script>
+    const sayPrabh= function(){
+        console.log("Prabhjot Singh");
+    }
+ 
+    const changeText=function(){
+        document.querySelector('h1').innerHTML="JavaScript Async Code"
+    }
+   
+    const chnageMe=setTimeout(changeText, 2000);
+ 
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(chnageMe);// e ki krda jhera timeout startkita hunda onu rokn layi likhya hunda j e run ho te fer oo run nhi hunda
+        console.log("Stopped")
+    })// e function is karke likhya jo clearTimeout bare pta chal ske te oo e run : jive o submit button te click karega te oo name chnage nhi hovega
+   
+ 
+   
+    // setTimeout(function(){
+    //     console.log("Prabhjot Singh")
+    // }, 2000 )// ye 2000 hai time hai jo time mangta hai itne k liye j ik milisec me time mangta hai or isme jo function likha hai usko handler bhi bolte hai (ik method hai or API ko bhi call krta hai)
+    // // handler ik callback hai jiska koi name nhi hai
+ 
+</script>  
+</html>
