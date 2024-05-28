@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Async code</h1>
+    <button id="start"> start</button>
+    <button id="stop"> Stop</button>
+ 
+</body>
+ 
+<script>
+    // const sayDate=function(str){
+    //     console.log(str, Date.now())
+    // }
+   
+    // const intervalId=setInterval(sayDate, 1000, "hi") // e v setTimeout di tra hai bss farak e hai ki e har time jhera likhya us to baad run karda hai te nal
+    // //  e 3 parameter v lai lenda hai jo us nu print v kar dinda jive "hi dita"
+ 
+    // clearInterval(intervalId)// e jhera function haiga o0 set interval nu rok dinda
+ 
+    const sayDate=function(str){
+        console.log(str, Date.now())
+    }
+    let intervalId;
+ 
+    document.querySelector('#start').addEventListener('click', function(){
+        intervalId=setInterval(sayDate, 1000, "hi")
+    })
+ 
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearInterval(intervalId);
+    })
+ 
+ 
+ 
+</script>  
+</html>
