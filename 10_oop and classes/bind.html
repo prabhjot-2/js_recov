@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+
+<script>
+    class React{
+        constructor(){
+            this.library="React"
+            this.server="https://localhost:3000"
+
+            document
+                .querySelector('button')
+                .addEventListener('click', this.handleClick.bind(this))// bind keyword use karna is to bigar oo chalna nhi e dona nu bind kar k rakhda reference de rha hai
+        }
+        handleClick(){
+            console.log("button Clicked");
+            console.log(this.server);
+        }
+    }
+
+    const App=new React()
+</script>
+</html>
