@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+      //lexical scoping 
+    //   ede ch hunda ki jhera inner de ander var define nhi kita o onu andr use kar skda te ee bss function de ander hi hai te inner
+    // de ander jo hai oo bhar nhi use ho skda te agar do inner function define  kar dinde te o apas ch v apne var share nhi kar skde 
+        // function outer (){
+        //     let username= "prabh"
+        //     function inner(){
+        //         console.log("inner", username)
+        //     }
+        //     inner()
+        // }   
+        // outer()
+        // console.log("TOO Outer ", username) // gives error kyu ki function de bhar nhi bula skde 
+    
+        // closure : ede ch ki hunda ki function da pura lexical scope hi return kar dinde jis nal oo chal janda 
+
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+
+            return function(){// e haiga closure j apa thale function nu call kita te apa return ch pura function return karta jis nal jhera onu param meter define kita us hisan nal chal gya 
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
+    
+    
+    </script>
+</body>
+</html>
